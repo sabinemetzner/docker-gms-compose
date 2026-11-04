@@ -1,7 +1,7 @@
 services:
   backend:
-  build:
-    context: ./golden-movie-studio-backend
+    build:
+      context: ./golden-movie-studio-backend
     container_name: gms-backend
 
     ports:
@@ -12,12 +12,12 @@ services:
       - HOST=0.0.0.0
 
     networks:
-      - gms-netwok,
+      - gms-netwok
       
   frontend:
     build:
       context: ./golden-movie-studio-frontend
-      container_name: gms-frontend
+    container_name: gms-frontend
 
     ports:
       - "8080:8080"
